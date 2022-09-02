@@ -5,29 +5,109 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FTPHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="FTP Helper" ResizeMode="NoResize" MaxHeight="350" Width="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" MaxWidth="200"/>
+            <ColumnDefinition Width="auto" MaxWidth="150"/>
+            <ColumnDefinition Width="auto" MaxWidth="200"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid x:Name="CurrentIPAddreses">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="IPs of this PC" FontWeight="Bold" FontSize="16" Margin="5 5 0 0" HorizontalAlignment="Center"></TextBlock>
+        
+        <TextBlock Grid.Row="1" VerticalAlignment="Top" Grid.Column="0" x:Name="currentIP" Text="{Binding Name}" Margin="5 5 0 0" HorizontalAlignment="Center"></TextBlock>
+
+
         
         
-        <TextBlock Grid.Row="0" x:Name="currentIP" Text="{Binding Name}"></TextBlock>
-        
-        <ListView Grid.Row="1" ItemsSource="{Binding Addresses}">
+        <ListView Grid.Row="2" Grid.Column="0" MinWidth="150" ItemsSource="{Binding Addresses}" Margin="5 5 0 0" HorizontalAlignment="Center" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Address">
+                    <GridViewColumn Header="Addresses" Width="200">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding AddressAsString}"/>
+                                <TextBlock Text="{Binding AddressAsString}" HorizontalAlignment="Center"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
+
+
+
+
+        <TextBlock Grid.Row="7" Height="auto" TextWrapping="Wrap" Width="175" TextAlignment="Center" Margin="0 10 0 0" FontWeight="Bold" FontSize="14">NOTE: Please ensure your target IP address and your current IP addresses are on the same network.</TextBlock>
+
+    </Grid>
+
+        <Grid x:Name="TestandOpenConnection" Grid.Column="1" >
+        <StackPanel Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" Margin="25 0 0 0">
+            
+        
+            <TextBlock FontSize="16" Grid.Column="1" Grid.Row="0" x:Name="Col2Head" FontWeight="Bold" Margin="0 5 0 0" HorizontalAlignment="Center">Data Server IP</TextBlock>
+
+            <StackPanel Grid.Row="1" Grid.Column="1"  Orientation="Horizontal" Margin="0 10" HorizontalAlignment="Center">
+                <TextBox x:Name="dsIP1" MaxLength="3" Width="25" Height="auto"></TextBox>
+                <TextBlock Margin="2 0 2 0">.</TextBlock>
+                <TextBox x:Name="dsIP2" MaxLength="3" Width="25" Height="auto"></TextBox>
+                <TextBlock Margin="1 0 1 0">.</TextBlock>
+                <TextBox x:Name="dsIP3" MaxLength="3" Width="25" Height="auto"></TextBox>
+                <TextBlock Margin="1 0 1 0">.</TextBlock>
+                <TextBox x:Name="dsIP4" MaxLength="3" Width="25" Height="auto"></TextBox>
+            </StackPanel>
+
+
+            <TextBlock Grid.Row="3" Margin="1 3 0 0">User ID</TextBlock>
+            <TextBox Grid.Row="4"></TextBox>
+            <TextBlock Grid.Row="5" Margin="1 5 0 0">Pass</TextBlock>
+            <PasswordBox Grid.Row="6"></PasswordBox>
+
+            <TextBlock Margin="0 5 0 0" TextWrapping="Wrap" Width="125" Padding="5 0 5 0" FontSize="14" TextAlignment="Center">Test connection prior to opening a new connection</TextBlock>
+            
+            <Button x:Name="testConnectionButton"  Width="100" HorizontalAlignment="Center" Margin="0 8" Content="Test Connection" Click="testConnectionButton_Click" ></Button>
+
+            <Button x:Name="openConnectionButton" Width="100" HorizontalAlignment="Center" Margin="0 10" Content="Open Connection" Visibility="Hidden" Click="openConnectionButton_Click"></Button>
+        </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="2" Margin="15 5 0 0" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center">Help</TextBlock>
+
+            <Button x:Name="openPDF" HorizontalAlignment="Center" Width="100" Height="25" Grid.Row="1" Content="Set IP Handpad" Margin="0 5 0 0" Click="openPDF_Click"/>
+
+            <Button x:Name="openGoogle" HorizontalAlignment="Center" Width="100" Height="25" Grid.Row="2" Content="Set IPV4" Margin="0 5 0 0" Click="openGoogle_Click"></Button>
+
+
+
+        </Grid>
+        
     </Grid>
 </Window>
