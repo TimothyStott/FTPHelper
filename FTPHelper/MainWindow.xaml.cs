@@ -32,7 +32,7 @@ namespace FTPHelper
         private void testConnectionButton_Click(object sender, RoutedEventArgs e)
         {
 
-            if (FtpMethods.TestConnection(@"ftp://ftp.dlptest.com", "dlpuser", "rNrKYTX9g7z3RgJRmxWuGHbeu"))
+            if (FtpMethods.TestConnection(dsIP1.Text.Trim() + "." + dsIP2.Text.Trim() + "." + dsIP3.Text.Trim() + "." + dsIP4.Text.Trim(), userIDTextBox.Text.Trim(), passwordPassBox.ToString().Trim()))
             {
                 openConnectionButton.Visibility = Visibility.Visible;
                 openConnectionButton.IsEnabled = true;

@@ -15,7 +15,7 @@ namespace FTPHelper.FTPclasses
         {
             try
             {
-                var conn = new FtpClient("ftp.dlptest.com/", "dlpuser", "rNrKYTX9g7z3RgJRmxWuGHbeu");
+                var conn = new FtpClient(ipAddress, user, pass);
                 conn.Connect();
                 MessageBox.Show("FTP Connection Successful", "Success");
                 return true;
