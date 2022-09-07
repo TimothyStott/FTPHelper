@@ -88,7 +88,7 @@ namespace FTPHelper
                 using (Process openExplorer = new Process())
                 {
 
-                    System.Diagnostics.Process.Start("explorer", @"ftp://ftp.dlptest.com")  ;
+                    System.Diagnostics.Process.Start("explorer", "ftp://" + dsIP1.Text.Trim() + "." + dsIP2.Text.Trim() + "." + dsIP3.Text.Trim() + "." + dsIP4.Text.Trim())  ;
 
                 }
             }

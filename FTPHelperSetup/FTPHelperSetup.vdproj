@@ -59,6 +59,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.DesktopRuntime.6.0.x86"
+                    {
+                    "Name" = "8:.NET Desktop Runtime 6.0.1 (x86)"
+                    "ProductCode" = "8:Microsoft.NetCore.DesktopRuntime.6.0.x86"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -76,6 +92,16 @@
         {
             "LaunchCondition"
             {
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_713AF900724D4F8685AAF95F4147E929"
+                {
+                "Name" = "8:.NET Core"
+                "Message" = "8:[VSDNETCOREMSG]"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:https://dotnet.microsoft.com/download/dotnet-core/[NetCoreVerMajorDotMinor]"
+                "IsNETCore" = "11:TRUE"
+                "Architecture" = "2:0"
+                "Runtime" = "2:0"
+                }
             }
         }
         "File"
@@ -157,7 +183,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FTPHelperSetup"
         "ProductCode" = "8:{60477463-7B7B-4224-BF65-7C4816F87F99}"
-        "PackageCode" = "8:{AC19D603-DC4B-4888-BA8B-B9A07C52D9D1}"
+        "PackageCode" = "8:{DD5E8E92-D6F7-4893-814B-0C06E83FF107}"
         "UpgradeCode" = "8:{D2C6CD33-5D50-4D25-8380-D8EF2688FE72}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
@@ -706,7 +732,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5EC8A7491F034D6E9E7D3F158D8A8C53"
             {
-            "SourcePath" = "8:..\\FTPHelper\\obj\\Debug\\net6.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\FTPHelper\\obj\\x86\\Release\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_37FC221A024D42AB85D45B3C200ED5B0"
