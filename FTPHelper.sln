@@ -3,18 +3,54 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTPHelper", "FTPHelper\FTPHelper.csproj", "{465FD063-E404-4BFC-8650-928766B4A5AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FTPHelper", "FTPHelper\FTPHelper.csproj", "{465FD063-E404-4BFC-8650-928766B4A5AE}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FTPHelperSetup", "FTPHelperSetup\FTPHelperSetup.vdproj", "{126F9884-0471-4E57-AC5A-13BD6D41FE2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{465FD063-E404-4BFC-8650-928766B4A5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{465FD063-E404-4BFC-8650-928766B4A5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Debug|ARM.Build.0 = Debug|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Debug|x64.Build.0 = Debug|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Debug|x86.Build.0 = Debug|Any CPU
 		{465FD063-E404-4BFC-8650-928766B4A5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{465FD063-E404-4BFC-8650-928766B4A5AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Release|ARM.Build.0 = Release|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Release|ARM64.Build.0 = Release|Any CPU
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Release|x64.ActiveCfg = Release|x64
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Release|x64.Build.0 = Release|x64
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Release|x86.ActiveCfg = Release|x86
+		{465FD063-E404-4BFC-8650-928766B4A5AE}.Release|x86.Build.0 = Release|x86
+		{126F9884-0471-4E57-AC5A-13BD6D41FE2D}.Debug|Any CPU.ActiveCfg = Debug
+		{126F9884-0471-4E57-AC5A-13BD6D41FE2D}.Debug|ARM.ActiveCfg = Debug
+		{126F9884-0471-4E57-AC5A-13BD6D41FE2D}.Debug|ARM64.ActiveCfg = Debug
+		{126F9884-0471-4E57-AC5A-13BD6D41FE2D}.Debug|x64.ActiveCfg = Debug
+		{126F9884-0471-4E57-AC5A-13BD6D41FE2D}.Debug|x86.ActiveCfg = Debug
+		{126F9884-0471-4E57-AC5A-13BD6D41FE2D}.Release|Any CPU.ActiveCfg = Release
+		{126F9884-0471-4E57-AC5A-13BD6D41FE2D}.Release|ARM.ActiveCfg = Release
+		{126F9884-0471-4E57-AC5A-13BD6D41FE2D}.Release|ARM64.ActiveCfg = Release
+		{126F9884-0471-4E57-AC5A-13BD6D41FE2D}.Release|x64.ActiveCfg = Release
+		{126F9884-0471-4E57-AC5A-13BD6D41FE2D}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

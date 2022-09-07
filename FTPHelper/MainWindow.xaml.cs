@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -32,7 +33,7 @@ namespace FTPHelper
         private void testConnectionButton_Click(object sender, RoutedEventArgs e)
         {
 
-            if (FtpMethods.TestConnection(dsIP1.Text.Trim() + "." + dsIP2.Text.Trim() + "." + dsIP3.Text.Trim() + "." + dsIP4.Text.Trim(), userIDTextBox.Text.Trim(), passwordPassBox.ToString().Trim()))
+            if (FtpMethods.TestConnection("ftp://"+dsIP1.Text.Trim() + "." + dsIP2.Text.Trim() + "." + dsIP3.Text.Trim() + "." + dsIP4.Text.Trim(), userIDTextBox.Text.Trim(), passwordPassBox.Password.ToString().Trim()))
             {
                 openConnectionButton.Visibility = Visibility.Visible;
                 openConnectionButton.IsEnabled = true;
@@ -49,8 +50,9 @@ namespace FTPHelper
             {
                 using (Process pdfOpen = new Process())
                 {
+                    string path = System.IO.Path.Combine(Directory.GetCurrentDirectory().ToString())+"\\Documents\\setIpHandpad.pdf";
                     pdfOpen.StartInfo.UseShellExecute = true;
-                    pdfOpen.StartInfo.FileName = "..\\..\\..\\Documents\\setIpHandpad.pdf";
+                    pdfOpen.StartInfo.FileName = path;
                     pdfOpen.Start();
                 }
             }
